@@ -1,0 +1,39 @@
+.icon-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  span {
+    width: 266px;
+    height: 20px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 20px;
+
+    color: currentColor;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  &:last-child {
+    margin-top: 8px;
+  }
+
+  .map-icon,
+  .mail-icon,
+  .phone-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .facebook-icon,
+  .instagram-icon,
+  .linked-icon,
+  .twiter-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
