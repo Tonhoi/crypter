@@ -16,4 +16,24 @@ body {
   font-size: 1.6rem;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+
+  font-family: "popins", Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: popins;
+  src: url("../../assets/fonts/TTF/SVN-Poppins-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: popins;
+  src: url("../../assets/fonts/TTF/SVN-Poppins-Medium.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: popins;
+  src: url("../../assets/fonts/TTF/SVN-Poppins-Bold.ttf");
+  font-weight: 800;
 }

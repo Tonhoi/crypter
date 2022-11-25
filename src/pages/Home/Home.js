@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
 import classNames from "classnames/bind";
-import axios from "axios";
 
 import styles from "./Home.module.scss";
 import { Cart } from "./components/Cart";
 
 import { Address } from "../../components/Address";
+import postApi from "../../api/postApi";
+import Form from "./components/Form/Form";
 
 const cx = classNames.bind(styles);
 
@@ -22,13 +23,11 @@ const Home = () => {
 
   const [page, setPage] = useState(INIT_PAGE);
   console.log(data);
+
   useEffect(() => {
     const fetch = async () => {
       try {
-        const res = await axios.get(
-          `https://mic.t-solution.vn/api/v2/pages/?type=news.NewsDetailPage&fields=*&offset=${page}&limit=${LIMIT_PAGE}`
-        );
-        console.log(res);
+        const res = await postApi.getByOffsetAndLimitPage(page, LIMIT_PAGE);
         setData((prevData) => [...prevData, ...res.data.items]);
       } catch (error) {
         console.log("có lỗi xảy ra");
@@ -62,7 +61,7 @@ const Home = () => {
               <Address />
             </div>
           </div>
-          <div>
+          {/* <div>
             <form className={cx("form-block")}>
               <h3>Please send us a message if you need any help!</h3>
               <div className={cx("form-group")}>
@@ -116,7 +115,8 @@ const Home = () => {
               </div>
             </form>
             <button className={cx("button-submit")}>Submit</button>
-          </div>
+          </div> */}
+          <Form />
         </div>
       </div>
     </div>

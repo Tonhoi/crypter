@@ -2,6 +2,25 @@
   .padding {
     padding: 0 15px;
   }
+
+  .content {
+    position: relative;
+  }
+  .arrow-up-icon-block {
+    position: absolute;
+    bottom: 64px;
+    // bottom: 0;
+    right: 40px;
+    padding-left: 20px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+    .arrow-up-icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
   .footer {
     background-color: var(--black-color);
   }
