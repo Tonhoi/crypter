@@ -22,18 +22,22 @@ body {
 
 @font-face {
   font-family: popins;
-  src: url("../../assets/fonts/TTF/SVN-Poppins-Regular.ttf");
+  src: url("../../assets/fonts/OTF/SVN-Poppins-Regular.otf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: popins;
-  src: url("../../assets/fonts/TTF/SVN-Poppins-Medium.ttf");
+  src: url("../../assets/fonts/OTF/SVN-Poppins-Medium.otf");
   font-weight: 700;
 }
 
 @font-face {
   font-family: popins;
-  src: url("../../assets/fonts/TTF/SVN-Poppins-Bold.ttf");
+  src: url("../../assets/fonts/OTF/SVN-Poppins-Bold.otf");
   font-weight: 800;
+}
+
+i {
+  font-style: normal;
 }

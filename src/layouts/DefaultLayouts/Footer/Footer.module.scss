@@ -15,12 +15,11 @@
     height: 1px;
     background-color: #e6e8ec;
   }
-  .image {
+  .logo {
     position: relative;
     right: 68px;
-    width: 192px;
-    height: 32px;
-    object-fit: cover;
+    bottom: 38px;
+    color: #fcfcfd;
   }
 
   .heading {
@@ -77,15 +76,23 @@
   }
   .footer-top {
     grid-template-columns: 1fr;
-    padding: 64px 32px 48px;
+    padding: 22px 32px 48px;
+
+    .logo {
+      bottom: 0;
+    }
 
     .heading {
       margin-bottom: 24px;
     }
+
     .list,
     .address,
-    .image-block {
+    .logo-block {
       margin-bottom: 64px;
+    }
+    .logo-block {
+      margin-bottom: 20px;
     }
     .separate,
     .address {

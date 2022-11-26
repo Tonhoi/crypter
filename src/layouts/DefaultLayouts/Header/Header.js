@@ -2,30 +2,34 @@ import React, { useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
 
-import Images from "../../../assets/image";
-import { CloseIcon, MenuIcon, SearchIcon } from "../../../components/Icons";
+import {
+  CloseIcon,
+  LogoIcon,
+  MenuIcon,
+  SearchIcon,
+} from "../../../components/Icons";
 import Navigation from "./components/Navigation/Navigation";
+import { routes } from "../../../configs";
 
 const cx = classNames.bind(styles);
 const Header = () => {
   const [isMenuMobile, setIsMenuMobile] = useState(false);
-  console.log(isMenuMobile);
 
   return (
     <div className={cx("wrapper")}>
       <header className={cx("header")}>
-        <div className={cx("image-block")}>
-          <img src={Images.logo} alt="" className={cx("image")} />
+        <div className={cx("logo-block")}>
+          <LogoIcon className={cx("logo")} />
         </div>
         <div className={cx("list-block")}>
-          <ul className={cx("list")}>
-            <Navigation title={"Home"} />
-            <Navigation title={"About"} />
-            <Navigation title={"Product"} />
-            <Navigation title={"News"} />
-            <Navigation title={"Gallery"} />
-            <Navigation title={"Contact"} />
-          </ul>
+          <div className={cx("list")}>
+            <Navigation title={"Home"} to={routes.home} />
+            <Navigation title={"About"} to={routes.home} />
+            <Navigation title={"Product"} to={routes.home} />
+            <Navigation title={"News"} to={routes.home} />
+            <Navigation title={"Gallery"} to={routes.home} />
+            <Navigation title={"Contact"} to={routes.home} />
+          </div>
         </div>
         <div
           className={cx("menu-icon-block")}
@@ -48,12 +52,30 @@ const Header = () => {
           </div>
         </div>
       </header>
+
       {/* mobile, tablet */}
       <div
         className={cx("nav-mobile", {
           active: isMenuMobile,
         })}
       >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div className={cx("logo-block")}>
+            <LogoIcon className={cx("logo")} />
+          </div>
+          <div
+            className={cx("menu-icon-block", "close-icon-block")}
+            onClick={() => setIsMenuMobile(!isMenuMobile)}
+          >
+            <CloseIcon />
+          </div>
+        </div>
         <ul className={cx("list")}>
           <li className={cx("item")}>Home</li>
           <li className={cx("item")}>About</li>

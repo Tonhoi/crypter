@@ -14,18 +14,22 @@ const DefaultLayouts = ({ children }) => {
   return (
     <div className={cx("wrapper")}>
       <div style={{ position: "relative" }}>
-        <div className="grid-system wide">
-          <div className={cx("padding")}>
-            <div className={cx("header")}>
+        <div className={cx("header")}>
+          <div className="grid-system wide">
+            <div className={cx("padding")}>
               <Header />
             </div>
-
+          </div>
+        </div>
+        <div className="grid-system wide">
+          <div className={cx("padding")}>
             <div className={cx("content")}>{children}</div>
           </div>
         </div>
         <div className={cx("arrow-up-icon-block")} onClick={handleScrollTop}>
           <ArrowUpIcon className={cx("arrow-up-icon")} />
         </div>
+        {/* </div> */}
       </div>
 
       <div className={cx("footer")}>

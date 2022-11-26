@@ -6,6 +6,9 @@
     line-height: 36px;
     font-weight: 800;
     margin: 69px 0 31px 0;
+    &.heading-contact {
+      margin: 45px 0 31px 0;
+    }
   }
 
   .container {
@@ -69,8 +72,6 @@
       font-weight: 400;
       font-size: 1.6rem;
 
-      // line-height: 24px;
-
       text-align: justify;
 
       color: #777e91;
@@ -88,6 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 13px;
     .button-see-all {
       display: flex;
       flex-direction: row;
@@ -120,8 +122,14 @@
       display: flex;
       flex-direction: column;
       gap: 28px;
-      iframe {
-        width: 100%;
+      .iframe-block {
+        background: #f4f5f6;
+        border-radius: 16px;
+        iframe {
+          padding: 12px;
+          width: 100%;
+          border-radius: 16px;
+        }
       }
     }
 
@@ -129,7 +137,6 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
-      //   height: 544px;
 
       .form-group,
       .form-group-row-block {
@@ -141,12 +148,12 @@
 
         .form-label {
           width: 36px;
-          height: 12px;
+          // height: 12px;
 
           font-style: normal;
           font-weight: 700;
           font-size: 1.2rem;
-          line-height: 12px;
+          // line-height: 12px;
 
           text-transform: uppercase;
 
@@ -172,6 +179,11 @@
         flex-direction: row;
         justify-content: space-between;
         gap: 20px;
+        .form-group-row {
+          .form-input {
+            margin-top: 12px;
+          }
+        }
       }
     }
     .button-submit {
@@ -185,6 +197,7 @@
 
       border: 1px solid #000000;
       border-radius: 8px;
+      font-weight: 700;
     }
   }
 }

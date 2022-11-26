@@ -2,12 +2,12 @@ import React from "react";
 import classNames from "classnames/bind";
 
 import styles from "./Footer.module.scss";
-import Images from "../../../assets/image";
 import { Address } from "../../../components/Address";
 import {
   FacebookIcon,
   InstagramIcon,
   LinkedIcon,
+  LogoIcon,
   TwiterIcon,
 } from "../../../components/Icons";
 
@@ -16,8 +16,8 @@ const Footer = () => {
   return (
     <div className={cx("wrapper")}>
       <div className={cx("footer-top")}>
-        <div className={cx("image-block")}>
-          <img src={Images.logo} alt="" className={cx("image")} />
+        <div className={cx("logo-block")}>
+          <LogoIcon className={cx("logo")} />
         </div>
         <div className={cx("separate")}>
           <span className={cx("heading")}>Menu</span>
